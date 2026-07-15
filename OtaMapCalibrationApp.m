@@ -459,7 +459,7 @@ classdef OtaMapCalibrationApp < matlab.apps.AppBase                         % Ot
 
                     for i = 1:numFreq
                         line = fgetl(fid);
-                        tokens = regexp(line, 'Freq:(\d+)\s+Amp:[-\d.]+\s+Phase:([-\d.]+)', 'tokens');
+                        tokens = regexp(line, 'Frequency:(\d+)\s+Amplitude:[-\d.]+\s+Phase:([-\d.]+)', 'tokens');
                         phaseMatrix1(k,i) = str2double(tokens{1}{2});
                     end
                     fclose(fid);
@@ -522,7 +522,7 @@ classdef OtaMapCalibrationApp < matlab.apps.AppBase                         % Ot
 
                     for i = 1:numFreq
                         line = fgetl(fid);
-                        tokens = regexp(line, 'Freq:(\d+)\s+Amp:[-\d.]+\s+Phase:([-\d.]+)', 'tokens');
+                        tokens = regexp(line, 'Frequency:(\d+)\s+Amplitude:[-\d.]+\s+Phase:([-\d.]+)', 'tokens');
                         phaseMatrix(k,i) = str2double(tokens{1}{2});
                     end
                     fclose(fid);
